@@ -6,6 +6,18 @@ import smtplib
 from selenium import webdriver
 from selenium.webdriver.common import keys
 import pandas as pd
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello from Flask!'
+
+@app.route('/example')
+def example_route():
+    return 'Example route here!!!'
+
 
 # Connecting to web
 
@@ -52,6 +64,8 @@ for i in range(0, 19):
     i=i + 1
 print(mode)
 
+
+
 for i in range(0,19):
     k=nedo[i]
     o=mode[i]
@@ -65,4 +79,13 @@ print(data)
 s=data.to_csv(f"C:\\Users\\om\\Desktop\\{red}.csv")
 print(s)
 
+
+
 # print(title)
+
+
+
+
+
+
+
